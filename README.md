@@ -1,0 +1,1 @@
+Chart.js Example built on top of Create-react-App
