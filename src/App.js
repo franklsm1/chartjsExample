@@ -1,37 +1,25 @@
 import React, {Component} from 'react';
-import {Bar} from "react-chartjs-2";
 import LineChartExample from "./LineChartExample";
+import BarGraphExample from "./BarGraphExample";
+import DoughnutExample from "./DoughnutExample";
+import RadarExample from "./RadarExample";
 
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
     render() {
-        let options = {
-            legend: {display: true},
-            title: {
-                display: true,
-                text: 'Predicted world population (millions) in 2050'
-            }
-        };
-        let data = {
-            labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
-            datasets: [
-                {
-                    label: "Population (millions)",
-                    backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9", "#c45850"],
-                    data: [2478, 5267, 734, 784, 433]
-                }
-            ]
-        };
         return (
             <div className="App">
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo"/>
-                    <h1 className="App-title">Welcome to React</h1>
                 </header>
-                <Bar data={data} options={options} width="600" height="250"/>
-                <LineChartExample/>
+                <div style={{display: "inline-block"}}>
+                  <BarGraphExample/>
+                  <LineChartExample/>
+                  <DoughnutExample/>
+                  <RadarExample/>
+                </div>
             </div>
         );
     }
